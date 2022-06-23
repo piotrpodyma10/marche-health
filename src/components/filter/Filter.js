@@ -1,24 +1,14 @@
 import React, { useState } from 'react'
 import { getStyle } from '../../utils/styleUtils'
-import StateData from '../../assets/stateData.json'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 
-function Filter() {
+function Filter({ data }) {
   const [selectedRange, setSelectedRange] = useState('')
   const [filteredStates, setFilteredStates] = useState([])
   const ranges = ['0 - 250', '250 - 500', '500 - 1000', '1000 - 1000+']
-  const data = StateData.filter((value, index) => {
-    const _value = JSON.stringify(value)
-    return (
-      index ===
-      StateData.findIndex((obj) => {
-        return JSON.stringify(obj) === _value
-      })
-    )
-  })
 
   const handleChange = (event) => {
     const newSelectedRange = event.target.value
