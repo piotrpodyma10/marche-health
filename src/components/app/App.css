@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.map-filter .MuiFormControl-root {
+  width: 160px;
+  color: var(--orange);
+}
+
+.map-filter .MuiInputLabel-root.Mui-focused {
+  color: var(--orange);
+}
+
+.map-filter .MuiInput-root:after {
+  border-bottom: 2px solid var(--orange);
+}
+
+.MuiModal-root .MuiMenuItem-root.Mui-selected {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.MuiModal-root .MuiMenuItem-root.Mui-selected:hover,
+.MuiModal-root .MuiMenuItem-root.Mui-selected.Mui-focusVisible {
+  background-color: var(--orange);
+}
